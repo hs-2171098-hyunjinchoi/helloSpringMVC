@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--데이터 버퍼링(입력한 텍스트를 유지)을 위해 스프링 폼 태그를 사용함--%>
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 
 <html>

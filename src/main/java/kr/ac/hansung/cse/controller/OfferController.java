@@ -37,6 +37,7 @@ public class OfferController {
     }
 
     @PostMapping("/docreate")
+    // 검증 해야 함 : valid
     public String doCreate(Model model, @Valid Offer offer, BindingResult result) {
 
         // System.out.println(offer);
@@ -48,10 +49,11 @@ public class OfferController {
             for(ObjectError error:errors) {
                 System.out.println(error.getDefaultMessage());
             }
-
+            // 검증 결과 에러가 있으면 다시 제안하도록
             return "createoffer";
         }
 
+        // 에러 없으면 데이터베이스에 삽입
         // Controller -> Service -> Dao
         offerService.insert(offer);
 
