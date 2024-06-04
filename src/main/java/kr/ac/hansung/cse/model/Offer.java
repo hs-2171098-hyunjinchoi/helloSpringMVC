@@ -18,6 +18,12 @@ import javax.validation.constraints.Size;
 @Table(name = "offers")
 public class Offer {
 
+    public Offer(String name, String email, String text) {
+        this.name = name;
+        this.email = email;
+        this.text = text;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

@@ -55,7 +55,7 @@ public class OfferController {
 
         // 에러 없으면 데이터베이스에 삽입
         // Controller -> Service -> Dao
-        offerService.insert(offer);
+        offerService.insertOffer(offer);
 
         return "offercreated";
     }
